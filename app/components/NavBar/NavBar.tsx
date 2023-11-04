@@ -17,7 +17,8 @@ const NavBar = (props: Props) => {
                     <Link href={"/"}>MA</Link>
                 </div>
                 <div>
-                    <Link className={pathname === "/about" ? 'font-bold	' : 'font-medium'} href={"/about"}>about</Link>
+                    <Link className={pathname === "/about" ? 'font-bold' : 'font-medium'} href={"/about"}>about</Link>
+                    <Link className={pathname === "/project" ? 'font-bold' : 'font-medium'} href={"/project"}>project</Link>
                 </div>
             </div>
         </header>

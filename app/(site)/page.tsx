@@ -1,6 +1,6 @@
-import { getProjects } from "../sanity/sanity-utils"
-import project from "../sanity/schemas/project-schema"
-import { IProject } from "../types/project.types"
+import { getProjects } from "../../sanity/sanity-utils"
+import project from "../../sanity/schemas/project-schema"
+import { IProject } from "../../types/project.types"
 
 
 export default async function Home() {
