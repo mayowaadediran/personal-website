@@ -18,7 +18,7 @@ export default async function Home() {
         <h1 className="text-5xl	font-semibold	">Hi 👋🏿, I&apos;m Mayowa</h1>
         <h2 className="text-2xl font-light mt-3">A software developer based in Lagos, Nigeria.</h2>
       </div>
-
+      {/* 
     {projects.map((project: IProject) => 
 
       {
@@ -29,10 +29,10 @@ export default async function Home() {
         )
       }
      
-    )}
+    )} */}
     </main>
   )
 }
- 
+
 
 
