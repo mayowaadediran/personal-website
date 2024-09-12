@@ -1,6 +1,6 @@
 const project = {
     name: 'project',
-    title: 'Projects', 
+    title: 'Projects',
     type: 'document',
     fields: [
         {
@@ -15,25 +15,25 @@ const project = {
             options: {
                 source: 'name'
             }
-        }, 
+        },
         {
             name:'image',
-            title: 'Image', 
-            type: 'image', 
+            title: 'Image',
+            type: 'image',
             options: { hotspot: true },
             fields: [{
                 name: 'alt',
                 title: 'Alt',
                 type: 'string'
             }]
-        }, 
+        },
         {
             name: 'url',
             title: 'Url',
             type: 'url',
         },
         {
-            name: 'content', 
+            name: 'content',
             title: 'Content',
             type: "array",
             of:[{type: "block"}]
