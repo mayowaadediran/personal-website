@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 
 type Props = {}
 
-const NavBar = (props: Props) => {
+const NavBar = () => {
 
     const pathname = usePathname()
 
