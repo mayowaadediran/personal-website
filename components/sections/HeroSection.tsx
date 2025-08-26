@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -250,10 +251,13 @@ export default function HeroSection() {
                           whileHover={{ scale: 1.05 }}
                           transition={{ duration: 0.3 }}
                         >
-                          <img
+                          <Image
                             src="/header-image.JPEG"
                             alt="Mayowa Adediran - Senior Frontend Engineer"
+                            width={300}
+                            height={300}
                             className="w-full h-full object-cover object-center"
+                            priority
                           />
                         </motion.div>
                       </div>
