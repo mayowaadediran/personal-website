@@ -1,0 +1,28 @@
+{
+  "name": "Mayowa Adediran - Senior Frontend Engineer",
+  "short_name": "Mayowa Adediran",
+  "description": "Senior Frontend Engineer with 7+ years of experience in React, TypeScript, and Next.js",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8b5cf6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["portfolio", "developer", "frontend", "engineering"],
+  "lang": "en",
+  "scope": "/",
+  "id": "mayowa-adediran-portfolio"
+}

@@ -1,27 +1,183 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
 body {
-  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
-.container {
-  width: 70%;
-  margin: 0 auto;
-  height: 100vh;
+/* Custom utilities */
+.writing-mode-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Text selection */
+::selection {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: inherit;
+}
+
+/* Focus styles */
+a:focus,
+button:focus {
+  outline: 2px solid rgba(239, 68, 68, 0.5);
+  outline-offset: 2px;
+}
+
+/* Navigation enhancements */
+.nav-line {
+  transition: all 0.3s ease;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.nav-item.active::before {
+  width: 16px;
+}
+
+/* Smooth hover effects */
+.group:hover .nav-line {
+  background-color: currentColor;
+}
+
+/* Typography improvements */
+.tracking-wide-custom {
+  letter-spacing: 0.15em;
+}
+
+/* Reusable Component Styles */
+
+/* Section Headings */
+.section-heading {
+  @apply text-2xl md:text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100;
+}
+
+.hero-title {
+  @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-gray-900 dark:text-gray-100;
+}
+
+.hero-subtitle {
+  @apply text-lg md:text-xl lg:text-2xl font-medium leading-tight text-gray-600 dark:text-gray-400;
+}
+
+/* Container Styles */
+.section-container {
+  @apply max-w-4xl mx-auto;
+}
+
+.section-container-wide {
+  @apply max-w-5xl mx-auto px-6 lg:px-8;
+}
+
+.hero-container {
+  @apply max-w-4xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center;
+}
+
+/* Section Layouts */
+.section-base {
+  @apply py-16;
+}
+
+.section-light {
+  @apply bg-white dark:bg-gray-900;
+}
+
+.section-dark {
+  @apply bg-gray-50 dark:bg-gray-800;
+}
+
+/* Text Styles */
+.body-text {
+  @apply text-base text-gray-600 dark:text-gray-300 leading-relaxed;
+}
+
+.body-text-large {
+  @apply text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed;
+}
+
+.section-description {
+  @apply text-base text-gray-600 dark:text-gray-300 max-w-2xl;
+}
+
+/* Motion Utilities */
+.motion-fade-up {
+  /* Base styles for fade up animations - used with Framer Motion */
+}
+
+.motion-fade-in {
+  /* Base styles for fade in animations - used with Framer Motion */
+}
+
+.motion-slide-in {
+  /* Base styles for slide in animations - used with Framer Motion */
+}
+
+/* Layout Utilities */
+.content-spacing {
+  @apply space-y-4;
+}
+
+.content-spacing-large {
+  @apply space-y-6;
+}
+
+.grid-projects {
+  @apply grid md:grid-cols-2 gap-6 lg:gap-8;
+}
+
+.flex-experience {
+  @apply flex flex-col lg:flex-row gap-6 lg:gap-8;
 }
